@@ -139,5 +139,11 @@ class PacientesController extends AppController {
         
     }
     
-    
+    public function relatorio_procedimentos_por_paciente() {
+        $paciente = $this->Session->read('Usuario');
+        $this->loadModel("Exame");
+        $exames = $this->Exame->query("select Paciente.nome,Procedimento.nome,Exame.data,Procedimento.preco from pacientes as Paciente inner join exames as Exame on Paciente.id=Exame.paciente_id inner join procedimentos as Procedimento on Exame.procedimento_id=Procedimento.id order by Paciente.nome");
+        $this->set('exames', $exames);
+        
+    }
 }
