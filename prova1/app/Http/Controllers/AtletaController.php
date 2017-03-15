@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Atleta;
+use App\Evento;
+use App\Registro;
+
 use Illuminate\Http\Request;
 
 class AtletaController extends Controller
@@ -17,9 +20,15 @@ class AtletaController extends Controller
         
         return view('atleta.index');
     }
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
-    public function inscrever(Request $request) {
-        return view('atleta.inscrever');
+    public function inscrever() {
+        $eventos = Evento::all();
+        return view('atleta.inscrever')->with('eventos', $eventos);
     }
     
     /**
@@ -29,7 +38,7 @@ class AtletaController extends Controller
      */
     public function create()
     {
-        return view('atleta.inscrever');
+        
     }
 
     /**
@@ -40,7 +49,10 @@ class AtletaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+           //dd($request);
+        $p = Registro::create($request->all());
+        session()->flash('info', 'Evento registrado!');
+        return redirect('/home');
     }
 
     /**

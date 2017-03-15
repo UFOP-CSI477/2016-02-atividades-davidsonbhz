@@ -20,9 +20,16 @@ class CreateEventosTable extends Migration
             $table->date('data');            
             $table->timestamps();
         });
-         
+        
         DB::unprepared('alter table eventos modify id integer auto_increment');
         
+        DB::table('eventos')->insert(
+            array(
+                'nome' => 'Corrida em volta da lagoa',
+                'preco' => 22,
+                'data' => '2017-05-05'
+            )
+        );
     }
 
     /**

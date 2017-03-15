@@ -16,7 +16,7 @@ class CreateRegistrosTable extends Migration
         Schema::create('registros', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('atleta_id');
-            $table->integer('envento_id');
+            $table->integer('evento_id');
             $table->date('data');
             $table->integer('pago');            
             $table->timestamps();

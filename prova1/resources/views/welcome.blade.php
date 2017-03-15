@@ -64,17 +64,19 @@
             }
         </style>
     </head>
-    <body>
+    <body style="background-image: url('/img/background.jpg'); background-repeat: no-repeat; background-size:cover;">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
+            <div class="top-right links">
+                @if (Auth::check())
+                <a href="{{ url('/home') }}">Home</a>
+                @else
+                <a href="{{ url('/login') }}">Login</a>
+                <a href="{{ url('/register') }}">Register</a>
+                <a href="{{ url('/admin') }}">Admin</a>
+                @endif
+                
+            </div>
             @endif
 
             <div class="content">
@@ -82,7 +84,11 @@
                     Sistema de Eventos Esportivos
                 </div>
 
-                
+                @foreach($eventos as $e)
+                <div style="color: black; font-weight: bolder;" >
+                    {{$e->nome}} em {{$e->data}}
+                </div>
+                @endforeach
             </div>
         </div>
     </body>
