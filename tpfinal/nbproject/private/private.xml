@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/marialuisa/Dropbox/TPWEB/siadpre/arquivos/site_antigo/buscainscricao.php</file>
+            <file>file:/home/marialuisa/Dropbox/TPWEB/siadpre/arquivos/site_antigo/confirma.php</file>
+        </group>
+        <group name="Sistemas WEB">
+            <file>file:/storage/projetos/ufop/siadpre/routes/admin.php</file>
+            <file>file:/storage/projetos/ufop/siadpre/app/Http/Controllers/UsuarioController.php</file>
+            <file>file:/storage/projetos/ufop/siadpre/arquivos/sql/alteracoes.sql</file>
+            <file>file:/storage/projetos/ufop/siadpre/resources/views/usuarios/grupos.blade.php</file>
+            <file>file:/storage/projetos/ufop/siadpre/app/Http/Controllers/TurmaController.php</file>
+        </group>
+    </open-files>
+</project-private>
