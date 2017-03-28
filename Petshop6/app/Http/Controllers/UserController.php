@@ -36,7 +36,7 @@ class UserController extends Controller {
         return view('usuarios.create');
     }
 
-    public function verperfil() {
+    public function verperfil($id) {
         return view('usuarios.edit');
     }
 
